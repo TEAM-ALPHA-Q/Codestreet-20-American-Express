@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+    <title>Sign Up</title>
+      <br>
+      <div id="signup">
+        <h1 style="text-align: center;"><b>Sign Up</b></h1>
+        <br>
+        <form action="/signup" method="POST">
+          <label for="username">Email</label>
+          <br>
+          <input type="email" id="email" name="username" >
+          <br><br>
+          <label for="password">Password</label>
+          <br>
+          <input type="password" id="password" name="password" >
+          <br><br>
+          <label for="customer_id">Ecommerce Customer ID</label>
+          <br>
+          <input type="number" id="customer_id" name="customer_id" >
+          <br><br>
+          <center>
+          <button type="submit" class="btn btn-light">Sign Up</button>
+        </center>
+        </form>
+
+      </div>
+<%- include('partials/footer') %>

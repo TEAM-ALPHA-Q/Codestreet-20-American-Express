@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel='icon' href='https://www.kickle.com/wp-content/uploads/2016/11/FAVICON-512x500.png' type='image/x-icon'>
+    
+    <title>Hi <%=First_Name%></title>
+</head>
+<body style="color: white;">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Knab</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/userhome">Dashboard</a>
+            </li>
+            <li>
+                <a href="/what">What is Knab?</a>
+            </li>
+            <li>
+                <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+
+        </div>
+      </nav>
+      <center>
+      <div id="profile">
+        <h1><b>Hi <%=First_Name%> <%=Last_name%></b></h1>
+        <br>
+        <div id="profilepic">
+          <img 
+            src="https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+            id="pic"
+          >
+        </div>
+      </div>
+
+      <br>
+     
+      <div id="score">
+        <h1><b>Your knab Score is:</b></h1>
+        <br>
+        <p> 
+          <strong class="radial-score" data-duration="3"><%=Credit_Score%>/1000</strong>
+        </p>  
+      </div>
+      <br>
+      <div id="coupons">
+        Redeem your Coupons NOW!!
+      </div>
+    </center>
+
+<script>
+$('.radial-score').each(function(i){
+  var el = $(this);
+  el.append('<span></span>');
+  var scoreString = el.text().split('/');
+   $(this).data('numerator',scoreString[0]);
+    $(this).data('denominator',scoreString[1]);
+  var dur = $(this).data('duration');
+  el.text('');
+  el.append('<span>'+0+'</span>')
+  var score = ( 1 - ((scoreString[0] * 1) / (scoreString[1] * 1)) ) * 720;
+  $(this).append('<svg version="1.1" class="valuescore'+i+'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><style>.inner'+i+' {stroke-dashoffset: 716;-webkit-animation:dash'+i+' '+dur+'s linear forwards paused;}@-webkit-keyframes dash'+i+' {from { stroke-dashoffset: 716;}to {stroke-dashoffset: '+score+';}}</style><circle class="outer outer'+i+'" cx="125" cy="125" r="115"/><circle class="inner inner'+i+'" cx="125" cy="125" r="115"/></svg>');    
+}); 
+function runRadials(){
+  $('.radial-score').each(function(i){     
+    var numerator = $(this).data('numerator');
+    var denominator = $(this).data('denominator');
+    var dur = $(this).data('duration');
+    var spanner = $(this).children('span').first();
+    dur = ( dur * 1000 ) / denominator;
+    function incrementText(){
+      var cText = spanner.text()*1;
+      if( cText >= ( numerator - 1) ){
+        clearInterval(scoreTime);
+      }
+      c = cText + 1;
+      spanner.text(c); 
+    };
+    var scoreTime = setInterval(function(){incrementText()},dur);
+    $(this).children('svg').children('circle.inner'+i+'').css({
+      '-webkit-animation-play-state':'running',
+      '-moz-animation-play-state':'running',
+      'animation-play-state':'running'
+    }); 
+  });
+};
+$(window).scroll(function() {
+  var height = $(window).scrollTop();  
+    // USED AN ARBITRARY VALUE HERE FOR EXAMPLE
+  if(height  > 10 && $('.content-wrap').hasClass('hasOpenRadials') ) {
+      $('.content-wrap').removeClass('hasOpenRadials')
+      runRadials();
+  }
+});   
+runRadials();
+</script>
+<%- include('partials/footer') %>
+
+
