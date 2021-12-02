@@ -22,3 +22,10 @@ Our application took inspiration from CREDIT SCORE system used in banks, which r
 4) In future if we collaborate with Ecommerce website customer would not need to enter the customer ID and can register directly from email only.
 5) These knab scores are calculated by our ML/Deep learning model that has been implemented on more than 3000 real world customer's data.
 6) Your Email and passwords are kept safely in encrypted form so even we as administrator cannot accesss your account.
+
+<h3><b>How to use our App:</b></h3>
+
+<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss1.PNG" width = 80% height= 70%><br>
+<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss2.PNG" width = 80% height= 70%><br>
+<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss3.PNG" width = 80% height= 70%><br>
+<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss4.PNG" width = 80% height= 70%><br>
