@@ -23,8 +23,7 @@ Our application took inspiration from CREDIT SCORE system used in banks, which r
 5) These knab scores are calculated by our ML/Deep learning model that has been implemented on more than 3000 real world customer's data.
 6) Your Email and passwords are kept safely in encrypted form so even we as administrator cannot accesss your account.
 
-<h3><b>How to use our App:</b></h3>
-
+<h3><b>Screenshots:</b></h3>
 <img src="ss1.PNG" width = 80% height= 70%><br>
 <img src="ss2.PNG" width = 80% height= 70%><br>
 <img src="ss3.PNG" width = 80% height= 70%><br>
