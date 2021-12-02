@@ -1,5 +1,7 @@
 # Loyality and shopping patterns analysis/reward program to reduce customer returns.
 
+Project Explained here: https://drive.google.com/file/d/1h5_r76lR5jXRkRnWDCfsnP_1IOdfq0X-/view?usp=sharing
+
 Deployed Website link: https://knapapp.herokuapp.com/ (DO READ STEPS MENTIONED BELOW BEFORE VISITING THE SITE)
 <br>
 <h3><b>Problem Statement</b></h3>
