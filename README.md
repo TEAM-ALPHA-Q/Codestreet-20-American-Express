@@ -25,7 +25,7 @@ Our application took inspiration from CREDIT SCORE system used in banks, which r
 
 <h3><b>How to use our App:</b></h3>
 
-<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss1.PNG" width = 80% height= 70%><br>
-<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss2.PNG" width = 80% height= 70%><br>
-<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss3.PNG" width = 80% height= 70%><br>
-<img src="https://https://github.com/TEAM-ALPHA-Q/KNAB-App/blob/master/ss4.PNG" width = 80% height= 70%><br>
+<img src="ss1.PNG" width = 80% height= 70%><br>
+<img src="ss2.PNG" width = 80% height= 70%><br>
+<img src="ss3.PNG" width = 80% height= 70%><br>
+<img src="ss4.PNG" width = 80% height= 70%><br>
